@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 const port = 3000; 
 
+/* The line app.use(express.json()); in an Express application is a way to incorporate middleware that parses 
+incoming requests with JSON payloads. Essentially, it tells the Express app to automatically parse 
+JSON-formatted request bodies and make the parsed data accessible 
+through req.body in your route handlers or middleware functions.*/
 app.use(express.json());
 
 // in-memory data store
