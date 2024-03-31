@@ -58,5 +58,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, () => {
-    console.log(`Example middleware app listening at http://localhost:${port}`);
+    console.log(`Example middleware app listening at http://localhost:${port} \n`);
 });

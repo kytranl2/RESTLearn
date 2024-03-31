@@ -1,0 +1,12 @@
+# 1. Base image 
+FROM node:14-alpine
+# 2. Set up working directory
+WORKDIR /Users/VyTran/Documents/Python3/RESTLearn
+# 3. Copy application files 
+COPY . . 
+# 4. Install dependencies 
+RUN npm install 
+# 5. Expose port, main role of `EXPOSE` is for documentation 
+EXPOSE 3000
+# 6. Start the application
+CMD ["node", "middlewareDemo.js"]
