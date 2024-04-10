@@ -50,9 +50,7 @@ docker build -t [yourusername]/my-express-app .
 
 docker run -p 4200:3000 my-express-app
 
-docker stop [imageId]
-
-docker login 
+docker stop [imageId] 
 
 docker push [yourusername]/my-express-app 
 
