@@ -15,6 +15,7 @@ Key Features:
 - Simplicity and Flexibility: With Express, you can structure your application as you see fit. There's no strict enforcement of how to organize your app, giving you the freedom to choose the most suitable architecture for your project.
 ## 
 ### Commands 
+run `npm install`
 
 In express-example folder, run `node [name].js` 
 
