@@ -48,6 +48,8 @@ docker login
 
 docker build -t [yourusername]/my-express-app .
 
+docker pull [yourusername]/my-express-app:latest
+
 docker run -p 4200:3000 my-express-app
 
 docker stop [imageId] 
