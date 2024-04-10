@@ -56,3 +56,6 @@ docker stop [imageId]
 
 docker push [yourusername]/my-express-app 
 
+docker buildx build --platform linux/arm/v7 -t username/appname:latest . --load
+
+
