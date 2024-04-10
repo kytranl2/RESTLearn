@@ -2,7 +2,7 @@
 # syntax=docker/dockerfile:1.0.0-experimental
 
 # 1. Base image specifying build platform
-FROM --platform=$BUILDPLATFORM node:14-alpine as builder
+FROM --platform=$BUILDPLATFORM node:14 as builder
 
 # Set ARGs for platforms
 ARG TARGETPLATFORM
