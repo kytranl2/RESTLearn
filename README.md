@@ -44,6 +44,8 @@ curl -X POST http://localhost:4200/api/protected -H "Content-Type: application/j
 curl -X POST http://localhost:4200/api/protected -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46cGFzc3dvcmQ=" -d '{"name": "John"}'
 
 ### Docker commands
+docker login 
+
 docker build -t [yourusername]/my-express-app .
 
 docker run -p 4200:3000 my-express-app
