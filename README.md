@@ -14,11 +14,12 @@ Key Features:
 
 - Simplicity and Flexibility: With Express, you can structure your application as you see fit. There's no strict enforcement of how to organize your app, giving you the freedom to choose the most suitable architecture for your project.
 ## 
-### Commands 
+## Commands 
+run `npm install`
 
 In express-example folder, run `node [name].js` 
 
-Curl commands in CMD:
+### Curl commands in CMD:
 
 server.js 
 
@@ -43,13 +44,15 @@ curl -X POST http://localhost:4200/api/protected -H "Content-Type: application/j
 curl -X POST http://localhost:4200/api/protected -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46cGFzc3dvcmQ=" -d '{"name": "John"}'
 
 ### Docker commands
+docker login 
+
 docker build -t [yourusername]/my-express-app .
+
+docker pull [yourusername]/my-express-app:latest
 
 docker run -p 4200:3000 my-express-app
 
-docker stop [imageId]
-
-docker login 
+docker stop [imageId] 
 
 docker push [yourusername]/my-express-app 
 
