@@ -75,4 +75,12 @@ For building the images in armv7(Raspberry Pi 4) architecture
 ```
 docker buildx build --platform linux/arm/v7 -t username/appname:latest . --load
 ```
+### Kubectl commands 
 
+```
+kubectl apply -f service.yaml
+```
+List all pods along with their IP addresses use:
+``` 
+kubectl get pods -o wide
+```
