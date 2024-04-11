@@ -23,39 +23,53 @@ In express-example folder, run `node [name].js`
 
 server.js 
 
+```
 curl -X POST http://localhost:3000/items -H "Content-Type: application/json" -d "{\"id\": 1, \"name\": \"Item 1\"}"
-
+```
+```
 curl http://localhost:3000/items
+```
 
 middlewareDemo.js 
 
+```
 curl -X POST http://localhost:3000/api/protected -H "Content-Type: application/json" -d "{\"name\": \"John\"}"
-
+```
+```
 curl -X POST http://localhost:3000/api/protected -H "Content-Type: application/json" -H "Authorization: Basic wrongcredentials" -d "{\"name\": \"John\"}"
-
+```
+```
 curl -X POST http://localhost:3000/api/protected -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46cGFzc3dvcmQ=" -d "{\"name\": \"John\"}"
-
+```
 ### Curl commands in Bash: 
 
 middlewareDemo.js 
-
+```
 curl -X POST http://localhost:4200/api/protected -H "Content-Type: application/json" -d '{"name": "John"}'
-
+```
+```
 curl -X POST http://localhost:4200/api/protected -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46cGFzc3dvcmQ=" -d '{"name": "John"}'
-
+```
 ### Docker commands
+```
 docker login 
-
+```
+```
 docker build -t [yourusername]/my-express-app .
-
+```
+```
 docker pull [yourusername]/my-express-app:latest
-
+```
+```
 docker run -p 4200:3000 my-express-app
-
+```
+```
 docker stop [imageId] 
-
+```
+```
 docker push [yourusername]/my-express-app 
-
+```
+```
 docker buildx build --platform linux/arm/v7 -t username/appname:latest . --load
-
+```
 
