@@ -84,3 +84,7 @@ List all pods along with their IP addresses use:
 ``` 
 kubectl get pods -o wide
 ```
+List cluster IP of each service, which is the internal IP by which the service is accessible within the cluster, along with any external IP if exposed externally:
+```
+kubectl get services
+```
