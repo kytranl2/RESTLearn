@@ -17,7 +17,22 @@ Key Features:
 ## Kubernetes 
 Kubernetes, often abbreviated as K8s, is an open-source platform designed to automate deploying, scaling, and operating application containers. It was originally developed by Google and is now maintained by the Cloud Native Computing Foundation. Kubernetes simplifies the management of containerized applications, making it easier to implement cloud-native strategies in a robust, efficient manner.
 
-In a Kubernetes environment, various resources such as **pods**, **services**, and **nodes** each have their own IP addresses, which are crucial for internal and external communications.
+In a Kubernetes environment, various resources such as **pods**, **services**, and **nodes** each have their own IP addresses, which are crucial for internal and external communications:
+- **pods**: Each pod is assigned a unique IP address from the cluster's internal network, IP addresses like 10.244.2.4 are typically private to the cluster.
+- **services**: provide a static IP address and load balancing for a set of **pods**. Service have a fixed IP address while managing dynamic IP addresses of pods.
+  ```
+       NAME         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)          AGE
+       kubernetes   ClusterIP   10.96.0.1     <none>        443/TCP          10d
+       web-service  NodePort    10.96.0.200   <none>        8080:30007/TCP   75m
+  ```
+  
+      The ClusterIP type services, which are only reachable within the cluster.
+      web-service has a cluster IP of 10.96.0.200, accessible internally at port 8080.
+      No EXTERNAL-IP is assigned to web-service as it is of type NodePort, not LoadBalancer.
+  
+- **node**: Each node has an internal IP used within the Kubernetes cluster network and possibly an external IP if accessible outside the network.
+
+
 
 ## Commands 
 run `npm install`
