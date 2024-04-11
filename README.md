@@ -108,3 +108,7 @@ List cluster IP of each service, which is the internal IP by which the service i
 ```
 kubectl get services
 ```
+List all nodes with their IPs
+```
+kubectl get nodes -o wide
+``` 
