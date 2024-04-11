@@ -69,6 +69,9 @@ docker stop [imageId]
 ```
 docker push [yourusername]/my-express-app 
 ```
+
+For building the images in armv7(Raspberry Pi 4) architecture
+
 ```
 docker buildx build --platform linux/arm/v7 -t username/appname:latest . --load
 ```
