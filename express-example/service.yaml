@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: express-app-service
+spec:
+  type: NodePort     # exposes the service on each Node’s IP at a static port (nodePort). 
+                     # You can contact the NodePort service, from outside the cluster, by requesting <NodeIP>:<NodePort>.
+  ports:
+  - port: 3000       # The port that the service exposes (this is the port your service will be accessed through within the cluster).
+    nodePort: 30010  #  The port that is exposed externally. It is the port through which you can access the service from outside the cluster.
+    protocol: TCP
+  selector:
+    app: express-app # This matches the labels defined in the deployment’s pod template (app: express-app). It tells the service which pods to route to.
