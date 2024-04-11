@@ -13,7 +13,12 @@ Key Features:
 - Routing: Express provides a powerful set of routing capabilities to control how an application responds to clients based on the URL and HTTP method.
 
 - Simplicity and Flexibility: With Express, you can structure your application as you see fit. There's no strict enforcement of how to organize your app, giving you the freedom to choose the most suitable architecture for your project.
-## 
+***
+## Kubernetes 
+Kubernetes, often abbreviated as K8s, is an open-source platform designed to automate deploying, scaling, and operating application containers. It was originally developed by Google and is now maintained by the Cloud Native Computing Foundation. Kubernetes simplifies the management of containerized applications, making it easier to implement cloud-native strategies in a robust, efficient manner.
+
+In a Kubernetes environment, various resources such as **pods**, **services**, and **nodes** each have their own IP addresses, which are crucial for internal and external communications.
+
 ## Commands 
 run `npm install`
 
