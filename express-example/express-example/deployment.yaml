@@ -1,0 +1,19 @@
+apiVersion: apps/v1        # API version for the Deployment object
+kind: Deployment           # Type of Kubernetes resource
+metadata:
+  name: express-app-deployment   # Name of the deployment
+spec:
+  replicas: 2                    # Number of instances to maintain
+  selector:
+    matchLabels:
+      app: express-app           # Labels to link this deployment to a specific service.  It matches a label, which will be defined in the template.metadata.labels field.
+  template:                      # Template for the pods managed by this deployment
+    metadata:
+      labels:
+        app: express-app         # Label applied to pods, must match service selector
+    spec:
+      containers:                # List of containers to be run the pods
+      - name: express-app        # Name of the container within the pod
+        image: kytranl0/my-express-app   # Docker image to use
+        ports:
+        - containerPort: 3000    # Port the container exposes
